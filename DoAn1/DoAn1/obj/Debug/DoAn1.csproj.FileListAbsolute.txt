@@ -1,0 +1,31 @@
+E:\Project\Do An 1\DoAn1\DoAn1\bin\Debug\DoAn1.exe.config
+E:\Project\Do An 1\DoAn1\DoAn1\bin\Debug\DoAn1.exe
+E:\Project\Do An 1\DoAn1\DoAn1\bin\Debug\DoAn1.pdb
+E:\Project\Do An 1\DoAn1\DoAn1\obj\Debug\DoAn1.csprojResolveAssemblyReference.cache
+E:\Project\Do An 1\DoAn1\DoAn1\obj\Debug\DoAn1.frmMain.resources
+E:\Project\Do An 1\DoAn1\DoAn1\obj\Debug\DoAn1.Properties.Resources.resources
+E:\Project\Do An 1\DoAn1\DoAn1\obj\Debug\DoAn1.csproj.GenerateResource.Cache
+E:\Project\Do An 1\DoAn1\DoAn1\obj\Debug\DoAn1.exe
+E:\Project\Do An 1\DoAn1\DoAn1\obj\Debug\DoAn1.pdb
+E:\Project\Do An 1\DoAn1\DoAn1\obj\Debug\DoAn1.frmDeTai.resources
+E:\Project\Do An 1\DoAn1\DoAn1\obj\Debug\DoAn1.frmGiangVien.resources
+E:\Project\Do An 1\DoAn1\DoAn1\obj\Debug\DoAn1.frmPhanCongDeTai.resources
+E:\Project\Do An 1\DoAn1\DoAn1\obj\Debug\DoAn1.frmPhong.resources
+E:\Project\Do An 1\DoAn1\DoAn1\obj\Debug\DoAn1.frmTaoLich.resources
+E:\Project\Do An 1\DoAn1\DoAn1\obj\Debug\DoAn1.frmNhomSV.resources
+D:\N3\Course I\DA1\DoAn1_16110545_HaMinhTri_16110267_DaoLeVanVinh\DoAn1\DoAn1\bin\Debug\DoAn1.exe.config
+D:\N3\Course I\DA1\DoAn1_16110545_HaMinhTri_16110267_DaoLeVanVinh\DoAn1\DoAn1\bin\Debug\DoAn1.exe
+D:\N3\Course I\DA1\DoAn1_16110545_HaMinhTri_16110267_DaoLeVanVinh\DoAn1\DoAn1\bin\Debug\DoAn1.pdb
+D:\N3\Course I\DA1\DoAn1_16110545_HaMinhTri_16110267_DaoLeVanVinh\DoAn1\DoAn1\obj\Debug\DoAn1.csprojResolveAssemblyReference.cache
+D:\N3\Course I\DA1\DoAn1_16110545_HaMinhTri_16110267_DaoLeVanVinh\DoAn1\DoAn1\obj\Debug\DoAn1.frmDeTai.resources
+D:\N3\Course I\DA1\DoAn1_16110545_HaMinhTri_16110267_DaoLeVanVinh\DoAn1\DoAn1\obj\Debug\DoAn1.frmGiangVien.resources
+D:\N3\Course I\DA1\DoAn1_16110545_HaMinhTri_16110267_DaoLeVanVinh\DoAn1\DoAn1\obj\Debug\DoAn1.frmMain.resources
+D:\N3\Course I\DA1\DoAn1_16110545_HaMinhTri_16110267_DaoLeVanVinh\DoAn1\DoAn1\obj\Debug\DoAn1.frmNhomSV.resources
+D:\N3\Course I\DA1\DoAn1_16110545_HaMinhTri_16110267_DaoLeVanVinh\DoAn1\DoAn1\obj\Debug\DoAn1.frmPhanCongDeTai.resources
+D:\N3\Course I\DA1\DoAn1_16110545_HaMinhTri_16110267_DaoLeVanVinh\DoAn1\DoAn1\obj\Debug\DoAn1.frmPhong.resources
+D:\N3\Course I\DA1\DoAn1_16110545_HaMinhTri_16110267_DaoLeVanVinh\DoAn1\DoAn1\obj\Debug\DoAn1.frmTaoLich.resources
+D:\N3\Course I\DA1\DoAn1_16110545_HaMinhTri_16110267_DaoLeVanVinh\DoAn1\DoAn1\obj\Debug\DoAn1.Properties.Resources.resources
+D:\N3\Course I\DA1\DoAn1_16110545_HaMinhTri_16110267_DaoLeVanVinh\DoAn1\DoAn1\obj\Debug\DoAn1.csproj.GenerateResource.cache
+D:\N3\Course I\DA1\DoAn1_16110545_HaMinhTri_16110267_DaoLeVanVinh\DoAn1\DoAn1\obj\Debug\DoAn1.csproj.CoreCompileInputs.cache
+D:\N3\Course I\DA1\DoAn1_16110545_HaMinhTri_16110267_DaoLeVanVinh\DoAn1\DoAn1\obj\Debug\DoAn1.exe
+D:\N3\Course I\DA1\DoAn1_16110545_HaMinhTri_16110267_DaoLeVanVinh\DoAn1\DoAn1\obj\Debug\DoAn1.pdb

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LapLichBaoVeLuanVan" Class="LinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-SK4RRQC\TRISQL;Initial Catalog=LapLichBaoVeLuanVan;Integrated Security=True" SettingsObjectName="DoAn1.Properties.Settings" SettingsPropertyName="LapLichBaoVeLuanVanConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CaTrongNgay" Member="CaTrongNgays">
+    <Type Name="CaTrongNgay">
+      <Column Name="Ca" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ThoiDiem" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Association Name="CaTrongNgay_Lich" Member="Liches" ThisKey="Ca" OtherKey="Ca" Type="Lich" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DeTai" Member="DeTais">
+    <Type Name="DeTai">
+      <Column Name="TenDT" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NamHoc" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HocKy" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="DeTai_PhanCong" Member="PhanCongs" ThisKey="TenDT,NamHoc,HocKy" OtherKey="TenDeTai,NamHoc,HocKy" Type="PhanCong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GiangVien" Member="GiangViens">
+    <Type Name="GiangVien">
+      <Column Name="MaGV" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenGV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ChucVu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SLDeTaiToiDa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="myIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="GiangVien_PhanCong" Member="PhanCongs" ThisKey="MaGV" OtherKey="GVHuongDan" Type="PhanCong" />
+      <Association Name="GiangVien_PhanCong1" Member="PhanCongs1" ThisKey="MaGV" OtherKey="GVPhanBien" Type="PhanCong" />
+      <Association Name="GiangVien_PhanCong2" Member="PhanCongs2" ThisKey="MaGV" OtherKey="UyVien" Type="PhanCong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Lich" Member="Liches">
+    <Type Name="Lich">
+      <Column Name="Ngay" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ca" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Phong" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaPC" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="CaTrongNgay_Lich" Member="CaTrongNgay" ThisKey="Ca" OtherKey="Ca" Type="CaTrongNgay" IsForeignKey="true" />
+      <Association Name="PhanCong_Lich" Member="PhanCong" ThisKey="MaPC" OtherKey="MaPC" Type="PhanCong" IsForeignKey="true" />
+      <Association Name="PhongHoc_Lich" Member="PhongHoc" ThisKey="Phong" OtherKey="MaPH" Type="PhongHoc" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Nhom" Member="Nhoms">
+    <Type Name="Nhom">
+      <Column Name="MaNhom" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SV1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SV2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="myIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Nhom_PhanCong" Member="PhanCongs" ThisKey="MaNhom" OtherKey="MaNhom" Type="PhanCong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhanCong" Member="PhanCongs">
+    <Type Name="PhanCong">
+      <Column Name="MaPC" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GVHuongDan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GVPhanBien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UyVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNhom" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="myIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TenDeTai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NamHoc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HocKy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PhanCong_Lich" Member="Liches" ThisKey="MaPC" OtherKey="MaPC" Type="Lich" />
+      <Association Name="DeTai_PhanCong" Member="DeTai" ThisKey="TenDeTai,NamHoc,HocKy" OtherKey="TenDT,NamHoc,HocKy" Type="DeTai" IsForeignKey="true" />
+      <Association Name="GiangVien_PhanCong" Member="GiangVien" ThisKey="GVHuongDan" OtherKey="MaGV" Type="GiangVien" IsForeignKey="true" />
+      <Association Name="GiangVien_PhanCong1" Member="GiangVien1" ThisKey="GVPhanBien" OtherKey="MaGV" Type="GiangVien" IsForeignKey="true" />
+      <Association Name="GiangVien_PhanCong2" Member="GiangVien2" ThisKey="UyVien" OtherKey="MaGV" Type="GiangVien" IsForeignKey="true" />
+      <Association Name="Nhom_PhanCong" Member="Nhom" ThisKey="MaNhom" OtherKey="MaNhom" Type="Nhom" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhongHoc" Member="PhongHocs">
+    <Type Name="PhongHoc">
+      <Column Name="MaPH" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenPH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="myIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PhongHoc_Lich" Member="Liches" ThisKey="MaPH" OtherKey="Phong" Type="Lich" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_getDanhSachPhanCongChuaTaoLich" Method="sp_getDanhSachPhanCongChuaTaoLich">
+    <ElementType Name="sp_getDanhSachPhanCongChuaTaoLichResult">
+      <Column Name="MaPC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GVHuongDan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GVPhanBien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UyVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNhom" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="myIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TenDeTai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NamHoc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HocKy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_getDanhSachPhanCongChuaTaoLichTheoGiangVien" Method="sp_getDanhSachPhanCongChuaTaoLichTheoGiangVien">
+    <Parameter Name="MaGV" Parameter="maGV" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_getDanhSachPhanCongChuaTaoLichTheoGiangVienResult">
+      <Column Name="MaPC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GVHuongDan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GVPhanBien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UyVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNhom" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="myIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TenDeTai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NamHoc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HocKy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_getDeTaiChuaDuocPhanCong" Method="sp_getDeTaiChuaDuocPhanCong">
+    <Parameter Name="HocKy" Parameter="hocKy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NamHoc" Parameter="namHoc" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_getDeTaiChuaDuocPhanCongResult">
+      <Column Name="TenDT" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NamHoc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HocKy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>
